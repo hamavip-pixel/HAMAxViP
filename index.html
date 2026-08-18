@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAMAxViP - Official Hub</title>
+    <title>HAMA APP STORE</title>
     <style>
         * {
             box-sizing: border-box;
@@ -21,55 +21,180 @@
             padding: 20px;
         }
         .container {
-            background: rgba(20, 20, 20, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(20, 20, 20, 0.9);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 255, 102, 0.3);
-            padding: 40px 30px;
+            padding: 30px 20px;
             border-radius: 20px;
-            max-width: 420px;
+            max-width: 480px;
             width: 100%;
             box-shadow: 0 0 35px rgba(0, 255, 102, 0.2);
             text-align: center;
         }
-        h2 {
+        h1 {
             font-size: 26px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             color: #fff;
             text-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
+            letter-spacing: 1px;
         }
         p {
-            font-size: 14px;
+            font-size: 13px;
             color: #aaa;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        .channel-btn {
+            display: block;
+            background: rgba(0, 255, 102, 0.05);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            color: #00ff66;
+            padding: 11px;
+            margin: 8px 0;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+        .channel-btn:hover {
+            background: #00ff66;
+            color: #000;
+            transform: translateY(-2px);
+        }
+        .check-btn {
+            background: yellow;
+            color: black;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 15px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .check-btn:hover {
+            background: #e6e600;
+        }
+        .error-list {
+            color: #ff3333;
+            text-align: right;
+            margin-top: 15px;
+            font-size: 13px;
             line-height: 1.6;
         }
-        .download-btn {
+        .success-box {
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .platform-btn {
             display: block;
             background: linear-gradient(135deg, #ff0055, #ff5500);
             color: white;
-            padding: 16px;
+            padding: 14px;
+            margin: 12px 0;
             text-decoration: none;
             font-weight: bold;
             border-radius: 12px;
-            font-size: 16px;
-            box-shadow: 0 5px 20px rgba(255, 0, 85, 0.4);
+            font-size: 15px;
+            box-shadow: 0 5px 20px rgba(255, 0, 85, 0.3);
             transition: all 0.3s ease;
         }
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 0, 85, 0.7);
+        .platform-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 85, 0.5);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>⚡ HAMAxViP Hub ⚡</h2>
-        <p>بەخێربێن بۆ وێبسایتی فەرمی. لێرەدا دەتوانیت نوێترین ئەپ و فایلەکان بە خێرایی و بە سەلامەتی داگرتت بکەیت.</p>
+        <h1>⚡ HAMA APP STORE ⚡</h1>
+        <p>تکایە سەرەتا سەردانی هەموو چەناڵەکان بکە پاشان پشکنین بکە:</p>
 
-        <!-- دوگمەی داگرتنی ئەپەکە -->
-        <a href="LIRHE_LINKS_MEGAY_APEKA_DANBE" target="_blank" class="download-btn">داگرتنی ئەپ (3.58GB) 📥</a>
+        <div id="channelsArea">
+            <!-- چەناڵەکان -->
+            <a href="https://t.me/hama_vip1" target="_blank" class="channel-btn" onclick="markVisited('c1')">چەناڵی فەرمی حەمە (دەسم لێدە)</a>
+            <a href="https://t.me/hama_feedback2" target="_blank" class="channel-btn" onclick="markVisited('c2')">چەناڵی فیدباک و سیقەی حەمە (دەسم لێدە)</a>
+            <a href="https://t.me/hama_vip_key1" target="_blank" class="channel-btn" onclick="markVisited('c3')">چەناڵی کلیل حەمە (دەسم لێدە)</a>
+            <a href="https://t.me/hama_vip2" target="_blank" class="channel-btn" onclick="markVisited('c4')">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان (دەسم لێدە)</a>
+            <a href="https://t.me/hama_group_chat" target="_blank" class="channel-btn" onclick="markVisited('c5')">گروپ چاتەکەی حەمە (دەسم لێدە)</a>
+            <a href="https://t.me/hama_ferkary" target="_blank" class="channel-btn" onclick="markVisited('c6')">جەناڵی فێرکاری حەمە (دەسم لێدە)</a>
+            <a href="https://t.me/hama_hack_video" target="_blank" class="channel-btn" onclick="markVisited('c7')">جەناڵی ڤیدیۆی هاکەکانی حەمە (دەسم لێدە)</a>
+            <a href="https://t.me/HAMA_IPA1" target="_blank" class="channel-btn" onclick="markVisited('c8')">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر (دەسم لێدە)</a>
+            <a href="https://t.me/hama_vip_apk" target="_blank" class="channel-btn" onclick="markVisited('c9')">جەناڵی تایبەت بەهاکی ئەندڕۆید (دەسم لێدە)</a>
+            <a href="https://t.me/CYBAR_MATRiX" target="_blank" class="channel-btn" onclick="markVisited('c10')">چەناڵی تایبەت بە فێربوونی هاک (دەسم لێدە)</a>
+
+            <button class="check-btn" onclick="checkStatus()">پشکنینی چەناڵەکان 🔍</button>
+        </div>
+
+        <div id="result" class="error-list"></div>
+        <div id="downloadArea"></div>
     </div>
+
+    <script>
+        let visited = {
+            c1: false, c2: false, c3: false, c4: false, c5: false,
+            c6: false, c7: false, c8: false, c9: false, c10: false
+        };
+
+        let channelNames = {
+            c1: "چەناڵی فەرمی حەمە",
+            c2: "چەناڵی فیدباک و سیقەی حەمە",
+            c3: "چەناڵی کلیل حەمە",
+            c4: "ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان",
+            c5: "گروپ چاتەکەی حەمە",
+            c6: "جەناڵی فێرکاری حەمە",
+            c7: "جەناڵی ڤیدیۆی هاکەکانی حەمە",
+            c8: "جەناڵی تایبەت بە ipa بۆ یاریەکانی تر",
+            c9: "جەناڵی تایبەت بەهاکی ئەندڕۆید",
+            c10: "چەناڵی تایبەت بە فێربوونی هاک"
+        };
+
+        function markVisited(key) {
+            visited[key] = true;
+        }
+
+        function checkStatus() {
+            let unvisited = [];
+            for (let key in visited) {
+                if (!visited[key]) {
+                    unvisited.push(channelNames[key]);
+                }
+            }
+
+            let resultDiv = document.getElementById("result");
+            let downloadArea = document.getElementById("downloadArea");
+            let channelsArea = document.getElementById("channelsArea");
+
+            if (unvisited.length === 0) {
+                channelsArea.style.display = "none"; // شاراوە کردنی چەناڵەکان کاتێک تەواو بوو
+                resultDiv.innerHTML = "";
+                downloadArea.innerHTML = `
+                    <div class='success-box'>
+                        <h3 style='color: #00ff66; margin-bottom: 15px;'>🎉 پیرۆزە! هەموو چەناڵەکانت جۆین کرد.</h3>
+                        <p style='color: #fff; margin-bottom: 15px;'>تکایە سیستەمی مۆبایلەکەت هەڵبژێرە بۆ داگرتت:</p>
+                        <!-- لێرە دەتوانیت لە خوارەوە لینکەکانت لە αντί gy بۆ هێڵی href دابنێیت -->
+                        <a href="LINKE_IPHONE_DANE" target="_blank" class="platform-btn">iPhone IOS 📱</a>
+                        <a href="LINKE_ANDROID_DANE" target="_blank" class="platform-btn">ANDROID 🤖</a>
+                    </div>
+                `;
+            } else {
+                let text = "❌ تکایە بەڕێزم، هێشتا سەردانی ئەم چەناڵانەی خوارەوەت نەکردووە:<br><ul>";
+                unvisited.forEach(name => {
+                    text += `<li>🔹 ${name}</li>`;
+                });
+                text += "</ul>تکایە سەردانیان بکە پاشان دووبارە پشکنین بکەوە!";
+                resultDiv.innerHTML = text;
+                downloadArea.innerHTML = "";
+            }
+        }
+    </script>
 
 </body>
 </html>
