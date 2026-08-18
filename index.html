@@ -54,17 +54,17 @@
         <h2>بۆ کردنەوەی ئەپ و وێبسایتەکە، تکایە سەردانی هەموو چەناڵەکانی حەمە بکە:</h2>
         <p style="font-size: 13px; color: #ccc;">سەرەتا لەسەر هەموویان دابگرە بۆ جۆین کردن، پاشان دوگمەی پشکنین دابگرە:</p>
 
-        <!-- چەناڵەکان -->
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c1')">چەناڵی فەرمی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c2')">چەناڵی فیدباک و سیقەی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c3')">چەناڵی کلیل حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c4')">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c5')">گروپ چاتەکەی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c6')">جەناڵی فێرکاری حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c7')">جەناڵی ڤیدیۆی هاکەکانی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c8')">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c9')">جەناڵی تایبەت بەهاکی ئەندڕۆید (دەسم لێدە)</a>
-        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c10')">چەناڵی تایبەت بە فێربوونی هاک (دەسم لێدە)</a>
+        <!-- چەناڵە ڕاستەقینەکان -->
+        <a href="https://t.me/hama_vip1" target="_blank" class="channel-btn" onclick="markVisited('c1')">چەناڵی فەرمی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/hama_feedback2" target="_blank" class="channel-btn" onclick="markVisited('c2')">چەناڵی فیدباک و سیقەی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/hama_vip_key1" target="_blank" class="channel-btn" onclick="markVisited('c3')">چەناڵی کلیل حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/hama_vip2" target="_blank" class="channel-btn" onclick="markVisited('c4')">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان (دەسم لێدە)</a>
+        <a href="https://t.me/hama_group_chat" target="_blank" class="channel-btn" onclick="markVisited('c5')">گروپ چاتەکەی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/hama_ferkary" target="_blank" class="channel-btn" onclick="markVisited('c6')">جەناڵی فێرکاری حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/hama_hack_video" target="_blank" class="channel-btn" onclick="markVisited('c7')">جەناڵی ڤیدیۆی هاکەکانی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/HAMA_IPA1" target="_blank" class="channel-btn" onclick="markVisited('c8')">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر (دەسم لێدە)</a>
+        <a href="https://t.me/hama_vip_apk" target="_blank" class="channel-btn" onclick="markVisited('c9')">جەناڵی تایبەت بەهاکی ئەندڕۆید (دەسم لێدە)</a>
+        <a href="https://t.me/CYBAR_MATRiX" target="_blank" class="channel-btn" onclick="markVisited('c10')">چەناڵی تایبەت بە فێربوونی هاک (دەسم لێدە)</a>
 
         <br>
         <button onclick="checkStatus()" style="background: yellow; color: black; padding: 12px 25px; font-weight: bold; border-radius: 5px; cursor: pointer; border: none; width: 100%; font-size: 16px;">پشکنینی چەناڵەکان 🔍</button>
@@ -109,7 +109,8 @@
 
             if (unvisited.length === 0) {
                 resultDiv.innerHTML = "";
-                downloadArea.innerHTML = "<div class='success-box'>🎉 پیرۆزە! هەموو چەناڵەکانت کردووە.<br><br><a href='لێرە_لینکی_داگرتنی_ئەپەکە_دانە' class='channel-btn' style='background: #ff0055; color: white;'>داگرتنی ئەپ (3.58GB) 📥</a></div>";
+                // لێرە لینکی میگای ئەپەکەی خۆت (یان لینکی داگرتن) دابنە لە شوێنی #
+                downloadArea.innerHTML = "<div class='success-box'>🎉 پیرۆزە! هەموو چەناڵەکانت کردووە.<br><br><a href='LIRHE_LINKS_MEGAY_APEKA_DANBE' class='channel-btn' style='background: #ff0055; color: white;'>داگرتنی ئەپ (3.58GB) 📥</a></div>";
             } else {
                 let text = "❌ تکایە بەڕێزم، هێشتا سەردانی ئەم چەناڵانەی خوارەوەت نەکردووە:<br><ul>";
                 unvisited.forEach(name => {
