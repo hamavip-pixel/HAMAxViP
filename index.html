@@ -21,7 +21,7 @@
             padding: 20px;
         }
         .container {
-            background: rgba(20, 20, 20, 0.9);
+            background: rgba(20, 20, 20, 0.95);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 255, 102, 0.3);
             padding: 30px 20px;
@@ -32,7 +32,7 @@
             text-align: center;
         }
         h1 {
-            font-size: 26px;
+            font-size: 24px;
             margin-bottom: 8px;
             color: #fff;
             text-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
@@ -43,23 +43,52 @@
             color: #aaa;
             margin-bottom: 20px;
         }
-        .channel-btn {
-            display: block;
-            background: rgba(0, 255, 102, 0.05);
-            border: 1px solid rgba(0, 255, 102, 0.3);
-            color: #00ff66;
-            padding: 11px;
+        .channel-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 255, 102, 0.03);
+            border: 1px solid rgba(0, 255, 102, 0.2);
+            padding: 8px 12px;
             margin: 8px 0;
-            text-decoration: none;
-            font-weight: bold;
             border-radius: 10px;
-            font-size: 13px;
-            transition: all 0.3s ease;
         }
-        .channel-btn:hover {
+        .channel-name {
+            font-size: 12px;
+            color: #00ff66;
+            font-weight: bold;
+            text-align: right;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .visit-btn {
             background: #00ff66;
             color: #000;
-            transform: translateY(-2px);
+            padding: 6px 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            transition: 0.2s;
+        }
+        .visit-btn:hover {
+            background: #00cc52;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 11px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        .checkbox-container input {
+            margin-left: 5px;
+            width: 16px;
+            height: 16px;
+            accent-color: #00ff66;
+            cursor: pointer;
         }
         .check-btn {
             background: yellow;
@@ -115,20 +144,69 @@
 
     <div class="container">
         <h1>⚡ HAMA APP STORE ⚡</h1>
-        <p>تکایە سەرەتا سەردانی هەموو چەناڵەکان بکە پاشان پشکنین بکە:</p>
+        <p>تکایە سەرەتا سەردانی چەناڵەکان بکە و نیشانەیان بکە پاشان پشکنین بکە:</p>
 
         <div id="channelsArea">
-            <!-- چەناڵەکان -->
-            <a href="https://t.me/hama_vip1" target="_blank" class="channel-btn" onclick="markVisited('c1')">چەناڵی فەرمی حەمە (دەسم لێدە)</a>
-            <a href="https://t.me/hama_feedback2" target="_blank" class="channel-btn" onclick="markVisited('c2')">چەناڵی فیدباک و سیقەی حەمە (دەسم لێدە)</a>
-            <a href="https://t.me/hama_vip_key1" target="_blank" class="channel-btn" onclick="markVisited('c3')">چەناڵی کلیل حەمە (دەسم لێدە)</a>
-            <a href="https://t.me/hama_vip2" target="_blank" class="channel-btn" onclick="markVisited('c4')">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان (دەسم لێدە)</a>
-            <a href="https://t.me/hama_group_chat" target="_blank" class="channel-btn" onclick="markVisited('c5')">گروپ چاتەکەی حەمە (دەسم لێدە)</a>
-            <a href="https://t.me/hama_ferkary" target="_blank" class="channel-btn" onclick="markVisited('c6')">جەناڵی فێرکاری حەمە (دەسم لێدە)</a>
-            <a href="https://t.me/hama_hack_video" target="_blank" class="channel-btn" onclick="markVisited('c7')">جەناڵی ڤیدیۆی هاکەکانی حەمە (دەسم لێدە)</a>
-            <a href="https://t.me/HAMA_IPA1" target="_blank" class="channel-btn" onclick="markVisited('c8')">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر (دەسم لێدە)</a>
-            <a href="https://t.me/hama_vip_apk" target="_blank" class="channel-btn" onclick="markVisited('c9')">جەناڵی تایبەت بەهاکی ئەندڕۆید (دەسم لێدە)</a>
-            <a href="https://t.me/CYBAR_MATRiX" target="_blank" class="channel-btn" onclick="markVisited('c10')">چەناڵی تایبەت بە فێربوونی هاک (دەسم لێدە)</a>
+            <!-- چەناڵ ١ -->
+            <div class="channel-row">
+                <span class="channel-name">چەناڵی فەرمی حەمە</span>
+                <a href="https://t.me/hama_vip1" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c1"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٢ -->
+            <div class="channel-row">
+                <span class="channel-name">چەناڵی فیدباک و سیقەی حەمە</span>
+                <a href="https://t.me/hama_feedback2" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c2"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٣ -->
+            <div class="channel-row">
+                <span class="channel-name">چەناڵی کلیل حەمە</span>
+                <a href="https://t.me/hama_vip_key1" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c3"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٤ -->
+            <div class="channel-row">
+                <span class="channel-name">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان</span>
+                <a href="https://t.me/hama_vip2" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c4"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٥ -->
+            <div class="channel-row">
+                <span class="channel-name">گروپ چاتەکەی حەمە</span>
+                <a href="https://t.me/hama_group_chat" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c5"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٦ -->
+            <div class="channel-row">
+                <span class="channel-name">جەناڵی فێرکاری حەمە</span>
+                <a href="https://t.me/hama_ferkary" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c6"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٧ -->
+            <div class="channel-row">
+                <span class="channel-name">جەناڵی ڤیدیۆی هاکەکانی حەمە</span>
+                <a href="https://t.me/hama_hack_video" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c7"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٨ -->
+            <div class="channel-row">
+                <span class="channel-name">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر</span>
+                <a href="https://t.me/HAMA_IPA1" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c8"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ٩ -->
+            <div class="channel-row">
+                <span class="channel-name">جەناڵی تایبەت بەهاکی ئەندڕۆید</span>
+                <a href="https://t.me/hama_vip_apk" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c9"> جۆینم کرد</label>
+            </div>
+            <!-- چەناڵ ١٠ -->
+            <div class="channel-row">
+                <span class="channel-name">چەناڵی تایبەت بە فێربوونی هاک</span>
+                <a href="https://t.me/CYBAR_MATRiX" target="_blank" class="visit-btn">سەردان 🔗</a>
+                <label class="checkbox-container"><input type="checkbox" id="c10"> جۆینم کرد</label>
+            </div>
 
             <button class="check-btn" onclick="checkStatus()">پشکنینی چەناڵەکان 🔍</button>
         </div>
@@ -138,11 +216,6 @@
     </div>
 
     <script>
-        let visited = {
-            c1: false, c2: false, c3: false, c4: false, c5: false,
-            c6: false, c7: false, c8: false, c9: false, c10: false
-        };
-
         let channelNames = {
             c1: "چەناڵی فەرمی حەمە",
             c2: "چەناڵی فیدباک و سیقەی حەمە",
@@ -156,14 +229,12 @@
             c10: "چەناڵی تایبەت بە فێربوونی هاک"
         };
 
-        function markVisited(key) {
-            visited[key] = true;
-        }
-
         function checkStatus() {
             let unvisited = [];
-            for (let key in visited) {
-                if (!visited[key]) {
+            
+            for (let key in channelNames) {
+                let checkbox = document.getElementById(key);
+                if (!checkbox.checked) {
                     unvisited.push(channelNames[key]);
                 }
             }
@@ -173,23 +244,22 @@
             let channelsArea = document.getElementById("channelsArea");
 
             if (unvisited.length === 0) {
-                channelsArea.style.display = "none"; // شاراوە کردنی چەناڵەکان کاتێک تەواو بوو
+                channelsArea.style.display = "none";
                 resultDiv.innerHTML = "";
                 downloadArea.innerHTML = `
                     <div class='success-box'>
                         <h3 style='color: #00ff66; margin-bottom: 15px;'>🎉 پیرۆزە! هەموو چەناڵەکانت جۆین کرد.</h3>
-                        <p style='color: #fff; margin-bottom: 15px;'>تکایە سیستەمی مۆبایلەکەت هەڵبژێرە بۆ داگرتت:</p>
-                        <!-- لێرە دەتوانیت لە خوارەوە لینکەکانت لە αντί gy بۆ هێڵی href دابنێیت -->
+                        <p style='color: #fff; margin-bottom: 15px;'>تکایە سیستەمی مۆبایلەکەت هەڵبژێرە:</p>
                         <a href="LINKE_IPHONE_DANE" target="_blank" class="platform-btn">iPhone IOS 📱</a>
                         <a href="LINKE_ANDROID_DANE" target="_blank" class="platform-btn">ANDROID 🤖</a>
                     </div>
                 `;
             } else {
-                let text = "❌ تکایە بەڕێزم، هێشتا سەردانی ئەم چەناڵانەی خوارەوەت نەکردووە:<br><ul>";
+                let text = "❌ تکایە بەڕێزم، هێشتا نیشانەی جۆین کردن بۆ ئەم چەناڵانەی خوارەوە نەداوە:<br><ul>";
                 unvisited.forEach(name => {
                     text += `<li>🔹 ${name}</li>`;
                 });
-                text += "</ul>تکایە سەردانیان بکە پاشان دووبارە پشکنین بکەوە!";
+                text += "</ul>تکایە سەردانیان بکە، خانەکەیان پر بکەرەوە پاشان دووبارە پشکنین بکەوە!";
                 resultDiv.innerHTML = text;
                 downloadArea.innerHTML = "";
             }
