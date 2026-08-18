@@ -3,125 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAMAxViP - پشکنینی چەناڵەکان</title>
+    <title>HAMAxViP - Official Hub</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            background-color: #0d0d0d;
+            background: linear-gradient(135deg, #050505, #111111);
             color: #00ff66;
-            font-family: Tahoma, sans-serif;
-            text-align: center;
+            font-family: 'Tahoma', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
         }
-        .box {
-            background: #1a1a1a;
-            border: 2px solid #00ff66;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 450px;
-            margin: auto;
-            box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+        .container {
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            padding: 30px 20px;
+            border-radius: 20px;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 0 30px rgba(0, 255, 102, 0.15);
+            text-align: center;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+        }
+        p {
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 25px;
         }
         .channel-btn {
-            display: block;
-            background: #00ff66;
-            color: #000;
-            padding: 10px;
-            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 255, 102, 0.05);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            color: #00ff66;
+            padding: 12px 15px;
+            margin: 10px 0;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s ease;
         }
         .channel-btn:hover {
-            background: #00cc52;
+            background: #00ff66;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 102, 0.4);
         }
-        .error-list {
-            color: #ff3333;
-            text-align: right;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-        .success-box {
-            color: #00ff66;
+        .download-btn {
+            display: block;
+            background: linear-gradient(135deg, #ff0055, #ff5500);
+            color: white;
+            padding: 15px;
+            margin-top: 25px;
+            text-decoration: none;
             font-weight: bold;
-            margin-top: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            box-shadow: 0 5px 20px rgba(255, 0, 85, 0.4);
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 85, 0.6);
         }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <h2>بۆ کردنەوەی ئەپ و وێبسایتەکە، تکایە سەردانی هەموو چەناڵەکانی حەمە بکە:</h2>
-        <p style="font-size: 13px; color: #ccc;">سەرەتا لەسەر هەموویان دابگرە بۆ جۆین کردن، پاشان دوگمەی پشکنین دابگرە:</p>
+    <div class="container">
+        <h2>⚡ HAMAxViP Hub ⚡</h2>
+        <p>سەردانی چەناڵە فەرمییەکانمان بکە بۆ بینینی نوێترین ئەپ و هاکەکان</p>
 
-        <!-- چەناڵە ڕاستەقینەکان -->
-        <a href="https://t.me/hama_vip1" target="_blank" class="channel-btn" onclick="markVisited('c1')">چەناڵی فەرمی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/hama_feedback2" target="_blank" class="channel-btn" onclick="markVisited('c2')">چەناڵی فیدباک و سیقەی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/hama_vip_key1" target="_blank" class="channel-btn" onclick="markVisited('c3')">چەناڵی کلیل حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/hama_vip2" target="_blank" class="channel-btn" onclick="markVisited('c4')">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان (دەسم لێدە)</a>
-        <a href="https://t.me/hama_group_chat" target="_blank" class="channel-btn" onclick="markVisited('c5')">گروپ چاتەکەی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/hama_ferkary" target="_blank" class="channel-btn" onclick="markVisited('c6')">جەناڵی فێرکاری حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/hama_hack_video" target="_blank" class="channel-btn" onclick="markVisited('c7')">جەناڵی ڤیدیۆی هاکەکانی حەمە (دەسم لێدە)</a>
-        <a href="https://t.me/HAMA_IPA1" target="_blank" class="channel-btn" onclick="markVisited('c8')">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر (دەسم لێدە)</a>
-        <a href="https://t.me/hama_vip_apk" target="_blank" class="channel-btn" onclick="markVisited('c9')">جەناڵی تایبەت بەهاکی ئەندڕۆید (دەسم لێدە)</a>
-        <a href="https://t.me/CYBAR_MATRiX" target="_blank" class="channel-btn" onclick="markVisited('c10')">چەناڵی تایبەت بە فێربوونی هاک (دەسم لێدە)</a>
+        <!-- چەناڵەکان -->
+        <a href="https://t.me/hama_vip1" target="_blank" class="channel-btn">چەناڵی فەرمی حەمە</a>
+        <a href="https://t.me/hama_feedback2" target="_blank" class="channel-btn">چەناڵی فیدباک و سیقەی حەمە</a>
+        <a href="https://t.me/hama_vip_key1" target="_blank" class="channel-btn">چەناڵی کلیل حەمە</a>
+        <a href="https://t.me/hama_vip2" target="_blank" class="channel-btn">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان</a>
+        <a href="https://t.me/hama_group_chat" target="_blank" class="channel-btn">گروپ چاتەکەی حەمە</a>
+        <a href="https://t.me/hama_ferkary" target="_blank" class="channel-btn">جەناڵی فێرکاری حەمە</a>
+        <a href="https://t.me/hama_hack_video" target="_blank" class="channel-btn">جەناڵی ڤیدیۆی هاکەکانی حەمە</a>
+        <a href="https://t.me/HAMA_IPA1" target="_blank" class="channel-btn">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر</a>
+        <a href="https://t.me/hama_vip_apk" target="_blank" class="channel-btn">جەناڵی تایبەت بەهاکی ئەندڕۆید</a>
+        <a href="https://t.me/CYBAR_MATRiX" target="_blank" class="channel-btn">چەناڵی تایبەت بە فێربوونی هاک</a>
 
-        <br>
-        <button onclick="checkStatus()" style="background: yellow; color: black; padding: 12px 25px; font-weight: bold; border-radius: 5px; cursor: pointer; border: none; width: 100%; font-size: 16px;">پشکنینی چەناڵەکان 🔍</button>
-
-        <div id="result" class="error-list"></div>
-        <div id="downloadArea" style="margin-top: 20px;"></div>
+        <!-- دوگمەی داگرتنی ئەپەکە -->
+        <a href="LIRHE_LINKS_MEGAY_APEKA_DANBE" target="_blank" class="download-btn">داگرتنی ئەپ (3.58GB) 📥</a>
     </div>
-
-    <script>
-        let visited = {
-            c1: false, c2: false, c3: false, c4: false, c5: false,
-            c6: false, c7: false, c8: false, c9: false, c10: false
-        };
-
-        let channelNames = {
-            c1: "چەناڵی فەرمی حەمە",
-            c2: "چەناڵی فیدباک و سیقەی حەمە",
-            c3: "چەناڵی کلیل حەمە",
-            c4: "ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان",
-            c5: "گروپ چاتەکەی حەمە",
-            c6: "جەناڵی فێرکاری حەمە",
-            c7: "جەناڵی ڤیدیۆی هاکەکانی حەمە",
-            c8: "جەناڵی تایبەت بە ipa بۆ یاریەکانی تر",
-            c9: "جەناڵی تایبەت بەهاکی ئەندڕۆید",
-            c10: "چەناڵی تایبەت بە فێربوونی هاک"
-        };
-
-        function markVisited(key) {
-            visited[key] = true;
-        }
-
-        function checkStatus() {
-            let unvisited = [];
-            for (let key in visited) {
-                if (!visited[key]) {
-                    unvisited.push(channelNames[key]);
-                }
-            }
-
-            let resultDiv = document.getElementById("result");
-            let downloadArea = document.getElementById("downloadArea");
-
-            if (unvisited.length === 0) {
-                resultDiv.innerHTML = "";
-                // لێرە لینکی میگای ئەپەکەی خۆت (یان لینکی داگرتن) دابنە لە شوێنی #
-                downloadArea.innerHTML = "<div class='success-box'>🎉 پیرۆزە! هەموو چەناڵەکانت کردووە.<br><br><a href='LIRHE_LINKS_MEGAY_APEKA_DANBE' class='channel-btn' style='background: #ff0055; color: white;'>داگرتنی ئەپ (3.58GB) 📥</a></div>";
-            } else {
-                let text = "❌ تکایە بەڕێزم، هێشتا سەردانی ئەم چەناڵانەی خوارەوەت نەکردووە:<br><ul>";
-                unvisited.forEach(name => {
-                    text += `<li>${name}</li>`;
-                });
-                text += "</ul>تکایە سەردانیان بکە پاشان دووبارە پشکنین بکەوە!";
-                resultDiv.innerHTML = text;
-                downloadArea.innerHTML = "";
-            }
-        }
-    </script>
 
 </body>
 </html>
