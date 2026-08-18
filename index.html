@@ -1,148 +1,126 @@
 <!DOCTYPE html>
-<html lang="ku" dir="rtl">
+<html lang="ckb" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAMA APP STORE</title>
+    <title>HAMAxViP - پشکنینی چەناڵەکان</title>
     <style>
-        * { box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, sans-serif; 
-            background: linear-gradient(135deg, #0f172a, #1e1b4b); 
-            color: #f8fafc; 
-            margin: 0; 
-            padding: 20px; 
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container { 
-            width: 100%; 
-            max-width: 450px; 
-            background: rgba(30, 41, 59, 0.7); 
-            backdrop-filter: blur(12px);
-            padding: 30px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
+        body {
+            background-color: #0d0d0d;
+            color: #00ff66;
+            font-family: Tahoma, sans-serif;
             text-align: center;
+            padding: 20px;
         }
-        h1 { 
-            color: #38bdf8; 
-            margin-bottom: 5px; 
-            font-size: 28px; 
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+        .box {
+            background: #1a1a1a;
+            border: 2px solid #00ff66;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 450px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
         }
-        p.subtitle { 
-            color: #94a3b8; 
-            margin-bottom: 25px; 
-            font-size: 15px; 
-        }
-        .platform-select {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        .platform-btn {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            color: white;
-            background: #334155;
-            border: 1px solid #475569;
-        }
-        .platform-btn.active {
-            background: #0ea5e9;
-            border-color: #38bdf8;
-            box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
-        }
-        .section-content {
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-        .section-content.active {
+        .channel-btn {
             display: block;
+            background: #00ff66;
+            color: #000;
+            padding: 10px;
+            margin: 8px 0;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .channel-btn:hover {
+            background: #00cc52;
         }
-        .app-card { 
-            background: rgba(15, 23, 42, 0.6); 
-            padding: 18px; 
-            border-radius: 14px; 
-            margin-top: 15px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
+        .error-list {
+            color: #ff3333;
             text-align: right;
+            margin-top: 15px;
+            font-size: 14px;
         }
-        .app-info strong { font-size: 16px; color: #f1f5f9; }
-        .app-info small { color: #94a3b8; display: block; margin-top: 4px; }
-        .btn-download { 
-            background: #10b981; 
-            padding: 10px 20px; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            font-size: 14px; 
-            transition: 0.2s;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        .success-box {
+            color: #00ff66;
+            font-weight: bold;
+            margin-top: 15px;
         }
-        .btn-download:hover { background: #059669; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>HAMA APP STORE</h1>
-        <p class="subtitle">فەرموون یەکێک لە سیستەمەکان هەڵبژێرە</p>
+    <div class="box">
+        <h2>بۆ کردنەوەی ئەپ و وێبسایتەکە، تکایە سەردانی هەموو چەناڵەکانی حەمە بکە:</h2>
+        <p style="font-size: 13px; color: #ccc;">سەرەتا لەسەر هەموویان دابگرە بۆ جۆین کردن، پاشان دوگمەی پشکنین دابگرە:</p>
 
-        <!-- دوگمەکانی هەڵبژاردنی سیستەم -->
-        <div class="platform-select">
-            <button class="platform-btn active" onclick="switchTab('ios', this)">iPhone iOS 📱</button>
-            <button class="platform-btn" onclick="switchTab('android', this)">ANDROID 🤖</button>
-        </div>
+        <!-- چەناڵەکان -->
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c1')">چەناڵی فەرمی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c2')">چەناڵی فیدباک و سیقەی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c3')">چەناڵی کلیل حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c4')">ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c5')">گروپ چاتەکەی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c6')">جەناڵی فێرکاری حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c7')">جەناڵی ڤیدیۆی هاکەکانی حەمە (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c8')">جەناڵی تایبەت بە ipa بۆ یاریەکانی تر (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c9')">جەناڵی تایبەت بەهاکی ئەندڕۆید (دەسم لێدە)</a>
+        <a href="https://t.me/LIRHE_LINKS_BODANE" target="_blank" class="channel-btn" onclick="markVisited('c10')">چەناڵی تایبەت بە فێربوونی هاک (دەسم لێدە)</a>
 
-        <!-- بەشی ئایفۆن -->
-        <div id="ios-section" class="section-content active">
-            <div class="app-card">
-                <div class="app-info">
-                    <strong>ناوی ئەپەکەت (بۆ ئایفۆن)</strong>
-                    <small>ڤێرژن: v1.0</small>
-                </div>
-                <a href="لێرە_لینکی_ئایفۆن_دابنە" class="btn-download" target="_blank">داگرتن</a>
-            </div>
-        </div>
+        <br>
+        <button onclick="checkStatus()" style="background: yellow; color: black; padding: 12px 25px; font-weight: bold; border-radius: 5px; cursor: pointer; border: none; width: 100%; font-size: 16px;">پشکنینی چەناڵەکان 🔍</button>
 
-        <!-- بەشی ئەندرۆید -->
-        <div id="android-section" class="section-content">
-            <div class="app-card">
-                <div class="app-info">
-                    <strong>ناوی ئەپەکەت (بۆ ئەندرۆید)</strong>
-                    <small>ڤێرژن: v1.0</small>
-                </div>
-                <a href="لێرە_لینکی_ئەندرۆید_دابنە" class="btn-download" target="_blank">داگرتن</a>
-            </div>
-        </div>
+        <div id="result" class="error-list"></div>
+        <div id="downloadArea" style="margin-top: 20px;"></div>
     </div>
 
     <script>
-        function switchTab(tab, btn) {
-            document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.platform-btn').forEach(el => el.classList.remove('active'));
-            
-            document.getElementById(tab + '-section').classList.add('active');
-            btn.classList.add('active');
+        let visited = {
+            c1: false, c2: false, c3: false, c4: false, c5: false,
+            c6: false, c7: false, c8: false, c9: false, c10: false
+        };
+
+        let channelNames = {
+            c1: "چەناڵی فەرمی حەمە",
+            c2: "چەناڵی فیدباک و سیقەی حەمە",
+            c3: "چەناڵی کلیل حەمە",
+            c4: "ئەپڵۆد کردن و بڵاو کردنەوەی فایلەکان",
+            c5: "گروپ چاتەکەی حەمە",
+            c6: "جەناڵی فێرکاری حەمە",
+            c7: "جەناڵی ڤیدیۆی هاکەکانی حەمە",
+            c8: "جەناڵی تایبەت بە ipa بۆ یاریەکانی تر",
+            c9: "جەناڵی تایبەت بەهاکی ئەندڕۆید",
+            c10: "چەناڵی تایبەت بە فێربوونی هاک"
+        };
+
+        function markVisited(key) {
+            visited[key] = true;
+        }
+
+        function checkStatus() {
+            let unvisited = [];
+            for (let key in visited) {
+                if (!visited[key]) {
+                    unvisited.push(channelNames[key]);
+                }
+            }
+
+            let resultDiv = document.getElementById("result");
+            let downloadArea = document.getElementById("downloadArea");
+
+            if (unvisited.length === 0) {
+                resultDiv.innerHTML = "";
+                downloadArea.innerHTML = "<div class='success-box'>🎉 پیرۆزە! هەموو چەناڵەکانت کردووە.<br><br><a href='لێرە_لینکی_داگرتنی_ئەپەکە_دانە' class='channel-btn' style='background: #ff0055; color: white;'>داگرتنی ئەپ (3.58GB) 📥</a></div>";
+            } else {
+                let text = "❌ تکایە بەڕێزم، هێشتا سەردانی ئەم چەناڵانەی خوارەوەت نەکردووە:<br><ul>";
+                unvisited.forEach(name => {
+                    text += `<li>${name}</li>`;
+                });
+                text += "</ul>تکایە سەردانیان بکە پاشان دووبارە پشکنین بکەوە!";
+                resultDiv.innerHTML = text;
+                downloadArea.innerHTML = "";
+            }
         }
     </script>
+
 </body>
 </html>
