@@ -321,17 +321,17 @@
             </div>
         </div>
 
-        <!-- بەشی خوارەوە کە لە هەموو شوێنێکدا دەردەکەوێت (ژمێرەر و ناردنی نامە بۆ ئۆنەر) -->
+        <!-- بەشی خوارەوە کە لە هەموو شوێنێکدا دەردەکەوێت (ژمێرەری سفر و ناردنی نامە بۆ ئۆنەر) -->
         <div class="footer-section">
-            <div class="visitor-counter">👥 کۆی سەردانیکەران: <span id="visitorCount">1428</span></div>
+            <div class="visitor-counter">👥 کۆی سەردانیکەران: <span id="visitorCount">0</span></div>
             <a href="https://t.me/i7x97x" target="_blank" class="owner-link">بۆ کێشەیەک نامە بنێرە بۆ Owner ناردنی نامە بۆ ئۆنەر… 💬</a>
         </div>
     </div>
 
     <script>
-        // سیستەمی ژمێرەری سەردانیکەران (کە لە هەموو سەردانێکدا زیاد دەکات)
+        // سیستەمی ژمێرەری سەردانیکەران کە لە سفرەوە دەست پێدەکات
         if (!localStorage.getItem('hamaVisitors')) {
-            localStorage.setItem('hamaVisitors', '1428');
+            localStorage.setItem('hamaVisitors', '0');
         } else {
             let currentCount = parseInt(localStorage.getItem('hamaVisitors'));
             if (!sessionStorage.getItem('counted')) {
