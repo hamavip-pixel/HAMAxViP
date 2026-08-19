@@ -24,7 +24,7 @@
             background: rgba(20, 20, 20, 0.95);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 255, 102, 0.3);
-            padding: 40px 25px;
+            padding: 35px 25px;
             border-radius: 20px;
             max-width: 450px;
             width: 100%;
@@ -82,6 +82,53 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(255, 0, 85, 0.5);
         }
+        .features-box {
+            display: none;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 0, 85, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: right;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .features-box h3 {
+            color: #ff0055;
+            font-size: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .features-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features-box li {
+            font-size: 13px;
+            color: #ddd;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .obb-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: yellow;
+            text-align: center;
+            font-weight: bold;
+        }
+        .key-box {
+            background: rgba(0, 255, 102, 0.1);
+            border: 1px dashed #00ff66;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 12px 0;
+            font-family: monospace;
+            color: #00ff66;
+            font-size: 14px;
+            font-weight: bold;
+        }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -99,10 +146,62 @@
         </div>
 
         <div id="platformsArea" class="platforms-box">
-            <!-- بەکارهێنانی تگی span بە direction: rtl بۆ پاراستنی ڕیزبەندی ڕستەکە -->
             <p style="color: #fff; margin-bottom: 15px;"><span style="direction: rtl; unicode-bidi: bidi-override; display: inline-block;">تکایە سیستەمی مۆبایلەکەت هەڵبژێرە 👇🏼</span></p>
-            <a href="LINKE_IPHONE_DANE" target="_blank" class="platform-btn">iPhone IOS 📱</a>
-            <a href="LINKE_ANDROID_DANE" target="_blank" class="platform-btn">ANDROID 🤖</a>
+            
+            <!-- دوگمەی ئایفۆن -->
+            <a href="javascript:void(0);" onclick="toggleIphone()" class="platform-btn" style="background: linear-gradient(135deg, #ff0055, #ff5500);">iPhone IOS 📱</a>
+            
+            <!-- بەشی تایبەتمەندییەکانی هاکی ئایفۆن -->
+            <div id="iphoneFeatures" class="features-box">
+                <h3>⚡ PUBG ViTNAMY (IOS) ⚡</h3>
+                <ul>
+                    <li><span>ESP / شوێنی نەفەر</span> <span>✅</span></li>
+                    <li><span>ESP CAR / شوێنی سەیارە</span> <span>✅</span></li>
+                    <li><span>AIMBOT / ئەیم بۆت</span> <span>✅</span></li>
+                    <li><span>SPPED CARS / خێرایی سەیارە</span> <span>✅</span></li>
+                    <li><span>FLAY CARS / فڕینی سەیارە</span> <span>✅</span></li>
+                    <li><span>SKiN MOD / سکین</span> <span>✅</span></li>
+                    <li><span>SKiN lobby / سکین لە لۆبی</span> <span>✅</span></li>
+                    <li><span>Slit aim / سڵێت ئەیم</span> <span>✅</span></li>
+                    <li><span>HITTING JUMP / بازی بەرز</span> <span>✅</span></li>
+                    <li><span>Rain / باران بارین</span> <span>✅</span></li>
+                    <li><span>Snow / بەفر بارین</span> <span>✅</span></li>
+                    <li><span>SPPED ENMEY / خێرا ڕۆشتن</span> <span>✅</span></li>
+                    <li><span>ONE SHOTS / وەن شۆت</span> <span>✅</span></li>
+                </ul>
+                <div style="color: #00ff66; text-align: center; font-size: 12px; margin: 8px 0;">وە زۆر شتی تر..!!</div>
+                
+                <!-- کلیلی ئایفۆن -->
+                <div class="key-box">KEY: @HAMA_ViP1912</div>
+
+                <!-- لینکی داگرتنی ئایفۆن -->
+                <a href="https://mega.nz/file/pNAkFRoC#WliI5ia5X09Atq250vKttqmE4fOp2NauPoafD0oQ1lY" target="_blank" class="action-btn" style="margin-top: 15px; font-size: 14px; padding: 12px;">داگرتنی ئەپی ئایفۆن 📥</a>
+            </div>
+
+            <!-- دوگمەی ئەندرۆید -->
+            <a href="javascript:void(0);" onclick="toggleAndroid()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff); margin-top: 15px;">ANDROID 🤖</a>
+
+            <!-- بەشی تایبەتمەندییەکانی هاکی ئەندرۆید -->
+            <div id="androidFeatures" class="features-box">
+                <h3>⚡ تایبەتمەندییەکانی هاک (ئەندڕۆید) ⚡</h3>
+                <ul>
+                    <li><span>ESP / شوێنی نەفەر</span> <span>✅</span></li>
+                    <li><span>Aimbot / ئەیم بۆت</span> <span>✅</span></li>
+                    <li><span>Skins / سکینەکان</span> <span>✅</span></li>
+                    <li><span>No recoil / سکۆپ نەجوڵان</span> <span>✅</span></li>
+                    <li><span>Small aim / بچوککردنەوەی ئەیم</span> <span>✅</span></li>
+                    <li><span>Silent aim / بوڵێت تراک</span> <span>✅</span></li>
+                    <li><span>HitX / گەورە کردنی دامج</span> <span>✅</span></li>
+                    <li><span>Hide Hack / شاردنەوەی هاک</span> <span>✅</span></li>
+                </ul>
+                <div class="obb-note">📌 پێویستی بە OBB هەیە ✅</div>
+                
+                <!-- کلیلی ئەندرۆید -->
+                <div class="key-box">KEY: @YJHMOD-JN3RX9</div>
+
+                <!-- لینکی داگرتنی ئەندرۆید -->
+                <a href="https://t.me/c/3906483191/10" target="_blank" class="action-btn" style="margin-top: 15px; font-size: 14px; padding: 12px;">داگرتنی ئەپ و فایل 📥</a>
+            </div>
         </div>
     </div>
 
@@ -110,6 +209,28 @@
         function showPlatforms() {
             document.getElementById('mainContent').style.display = 'none';
             document.getElementById('platformsArea').style.display = 'block';
+        }
+
+        function toggleIphone() {
+            let box = document.getElementById('iphoneFeatures');
+            let androidBox = document.getElementById('androidFeatures');
+            androidBox.style.display = 'none'; // داخشستنی ئەندرۆید ئەگەر کرابێتەوە
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'block';
+            }
+        }
+
+        function toggleAndroid() {
+            let box = document.getElementById('androidFeatures');
+            let iphoneBox = document.getElementById('iphoneFeatures');
+            iphoneBox.style.display = 'none'; // داخشستنی ئایفۆن ئەگەر کرابێتەوە
+            if (box.style.display === 'block') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'block';
+            }
         }
     </script>
 
