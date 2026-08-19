@@ -60,7 +60,7 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 255, 102, 0.5);
         }
-        .platforms-box {
+        .platforms-box, .android-versions-box {
             display: none;
             margin-top: 20px;
             animation: fadeIn 0.5s ease-in-out;
@@ -156,14 +156,26 @@
             <a href="javascript:void(0);" onclick="showPlatforms()" class="action-btn">دەسم لێدە بۆ بەردەوام بوون..</a>
         </div>
 
-        <!-- پەڕەی هەڵبژاردنی سیستەمەکان -->
+        <!-- پەڕەی هەڵبژاردنی سەرەکی (ئایفۆن و ئەندرۆید) -->
         <div id="platformsArea" class="platforms-box">
             <p style="color: #fff; margin-bottom: 15px;"><span style="direction: rtl; unicode-bidi: bidi-override; display: inline-block;">تکایە سیستەمی مۆبایلەکەت هەڵبژێرە 👇🏼</span></p>
             
             <a href="javascript:void(0);" onclick="openIphonePage()" class="platform-btn" style="background: linear-gradient(135deg, #ff0055, #ff5500);">iPhone IOS 📱</a>
-            <a href="javascript:void(0);" onclick="openAndroidPage()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff); margin-top: 15px;">ANDROID 🤖</a>
+            <a href="javascript:void(0);" onclick="showAndroidVersions()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff); margin-top: 15px;">ANDROID 🤖</a>
             
             <a href="javascript:void(0);" onclick="goBackMain()" class="action-btn back-btn">گەڕانەوە بۆ سەرەتا 🔙</a>
+        </div>
+
+        <!-- پەڕەی هەڵبژاردنی وەشانەکانی ئەندرۆید -->
+        <div id="androidVersionsArea" class="android-versions-box">
+            <p style="color: #fff; margin-bottom: 15px;"><span style="direction: rtl; unicode-bidi: bidi-override; display: inline-block;">تکایە وەشانی پۆبجی هەڵبژێرە 👇🏼</span></p>
+            
+            <a href="javascript:void(0);" onclick="openAndroidGlPage()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff);">PUBG GL 🌍</a>
+            <a href="javascript:void(0);" onclick="openAndroidKrPage()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff);">PUBG KR 🇰🇷</a>
+            <a href="javascript:void(0);" onclick="openAndroidTwPage()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff);">PUBG TW 🇹🇼</a>
+            <a href="javascript:void(0);" onclick="openAndroidVngPage()" class="platform-btn" style="background: linear-gradient(135deg, #00bfff, #0077ff);">PUBG VNG 🇻🇳</a>
+            
+            <a href="javascript:void(0);" onclick="goBackPlatforms()" class="action-btn back-btn">گەڕانەوە بۆ سیستەمەکان 🔙</a>
         </div>
 
         <!-- پەڕەی تازەی تایبەت بە ئایفۆن -->
@@ -194,10 +206,10 @@
             <a href="javascript:void(0);" onclick="goBackPlatforms()" class="action-btn back-btn">گەڕانەوە بۆ هەڵبژاردن 🔙</a>
         </div>
 
-        <!-- پەڕەی تازەی تایبەت بە ئەندرۆید -->
-        <div id="androidPage" class="features-page">
+        <!-- پەڕەی تازەی ئەندرۆید - گلۆباڵ (GL) -->
+        <div id="androidGlPage" class="features-page">
             <div class="features-box">
-                <h3>⚡ تایبەتمەندییەکانی هاک (ئەندڕۆید) ⚡</h3>
+                <h3>⚡ PUBG GL (ANDROID) ⚡</h3>
                 <ul>
                     <li><span>ESP / شوێنی نەفەر</span> <span>✅</span></li>
                     <li><span>Aimbot / ئەیم بۆت</span> <span>✅</span></li>
@@ -209,12 +221,73 @@
                     <li><span>Hide Hack / شاردنەوەی هاک</span> <span>✅</span></li>
                 </ul>
                 <div class="obb-note">📌 پێویستی بە OBB هەیە ✅</div>
-                
-                <div class="key-box">KEY: @YJHMOD-JN3RX9</div>
+                <div class="key-box">KEY: @HAMA_ViP1912</div>
             </div>
+            <a href="https://mega.nz/file/FIBGzaZS#20iIBqvyITiBml-S2nCizkk4RRgrKDM2mlYm-tYyXo0" target="_blank" class="action-btn" style="font-size: 14px; padding: 14px; text-align: center;">داگرتنی پۆبچی گلۆباڵ 📥</a>
+            <a href="javascript:void(0);" onclick="goBackAndroidVersions()" class="action-btn back-btn">گەڕانەوە بۆ وەشانەکان 🔙</a>
+        </div>
 
-            <a href="https://t.me/c/3906483191/10" target="_blank" class="action-btn" style="font-size: 14px; padding: 14px; text-align: center;">داگرتنی ئەپ و فایل 📥</a>
-            <a href="javascript:void(0);" onclick="goBackPlatforms()" class="action-btn back-btn">گەڕانەوە بۆ هەڵبژاردن 🔙</a>
+        <!-- پەڕەی تازەی ئەندرۆید - کۆری (KR) -->
+        <div id="androidKrPage" class="features-page">
+            <div class="features-box">
+                <h3>⚡ PUBG KR (ANDROID) ⚡</h3>
+                <ul>
+                    <li><span>ESP / شوێنی نەفەر</span> <span>✅</span></li>
+                    <li><span>Aimbot / ئەیم بۆت</span> <span>✅</span></li>
+                    <li><span>Skins / سکینەکان</span> <span>✅</span></li>
+                    <li><span>No recoil / سکۆپ نەجوڵان</span> <span>✅</span></li>
+                    <li><span>Small aim / بچوککردنەوەی ئەیم</span> <span>✅</span></li>
+                    <li><span>Silent aim / بوڵێت تراک</span> <span>✅</span></li>
+                    <li><span>HitX / گەورە کردنی دامج</span> <span>✅</span></li>
+                    <li><span>Hide Hack / شاردنەوەی هاک</span> <span>✅</span></li>
+                </ul>
+                <div class="obb-note">📌 پێویستی بە OBB هەیە ✅</div>
+                <div class="key-box">KEY: @HAMA_ViP1912</div>
+            </div>
+            <a href="https://mega.nz/file/YEQg2DAQ#fQEJ0hc_4bgyng-c_OG2aXqxrI5mlhyoGq3ZuA6SgsQ" target="_blank" class="action-btn" style="font-size: 14px; padding: 14px; text-align: center;">داگرتنی پۆبچی کۆری 📥</a>
+            <a href="javascript:void(0);" onclick="goBackAndroidVersions()" class="action-btn back-btn">گەڕانەوە بۆ وەشانەکان 🔙</a>
+        </div>
+
+        <!-- پەڕەی تازەی ئەندرۆید - تایوانی (TW) -->
+        <div id="androidTwPage" class="features-page">
+            <div class="features-box">
+                <h3>⚡ PUBG TW (ANDROID) ⚡</h3>
+                <ul>
+                    <li><span>ESP / شوێنی نەفەر</span> <span>✅</span></li>
+                    <li><span>Aimbot / ئەیم بۆت</span> <span>✅</span></li>
+                    <li><span>Skins / سکینەکان</span> <span>✅</span></li>
+                    <li><span>No recoil / سکۆپ نەجوڵان</span> <span>✅</span></li>
+                    <li><span>Small aim / بچوککردنەوەی ئەیم</span> <span>✅</span></li>
+                    <li><span>Silent aim / بوڵێت تراک</span> <span>✅</span></li>
+                    <li><span>HitX / گەورە کردنی دامج</span> <span>✅</span></li>
+                    <li><span>Hide Hack / شاردنەوەی هاک</span> <span>✅</span></li>
+                </ul>
+                <div class="obb-note">📌 پێویستی بە OBB هەیە ✅</div>
+                <div class="key-box">KEY: @HAMA_ViP1912</div>
+            </div>
+            <a href="https://mega.nz/file/BVRCDJiT#m6yDTnjuFjTTWA3ghxTmXEoKsjuWnJpFBOnOGW6f3xc" target="_blank" class="action-btn" style="font-size: 14px; padding: 14px; text-align: center;">داگرتنی پۆبچی تایوانی 📥</a>
+            <a href="javascript:void(0);" onclick="goBackAndroidVersions()" class="action-btn back-btn">گەڕانەوە بۆ وەشانەکان 🔙</a>
+        </div>
+
+        <!-- پەڕەی تازەی ئەندرۆید - ڤینچ (VNG) -->
+        <div id="androidVngPage" class="features-page">
+            <div class="features-box">
+                <h3>⚡ PUBG VNG (ANDROID) ⚡</h3>
+                <ul>
+                    <li><span>ESP / شوێنی نەفەر</span> <span>✅</span></li>
+                    <li><span>Aimbot / ئەیم بۆت</span> <span>✅</span></li>
+                    <li><span>Skins / سکینەکان</span> <span>✅</span></li>
+                    <li><span>No recoil / سکۆپ نەجوڵان</span> <span>✅</span></li>
+                    <li><span>Small aim / بچوککردنەوەی ئەیم</span> <span>✅</span></li>
+                    <li><span>Silent aim / بوڵێت تراک</span> <span>✅</span></li>
+                    <li><span>HitX / گەورە کردنی دامج</span> <span>✅</span></li>
+                    <li><span>Hide Hack / شاردنەوەی هاک</span> <span>✅</span></li>
+                </ul>
+                <div class="obb-note">📌 پێویستی بە OBB هەیە ✅</div>
+                <div class="key-box">KEY: @HAMA_ViP1912</div>
+            </div>
+            <a href="https://mega.nz/file/lFomkZBZ#X-0CL5UUbT0ADUPMOhjwlTCd8-qOVg59PMEE6usfWIc" target="_blank" class="action-btn" style="font-size: 14px; padding: 14px; text-align: center;">داگرتنی پۆبچی ڤینچ 📥</a>
+            <a href="javascript:void(0);" onclick="goBackAndroidVersions()" class="action-btn back-btn">گەڕانەوە بۆ وەشانەکان 🔙</a>
         </div>
     </div>
 
@@ -224,20 +297,48 @@
             document.getElementById('platformsArea').style.display = 'block';
         }
 
+        function showAndroidVersions() {
+            document.getElementById('platformsArea').style.display = 'none';
+            document.getElementById('androidVersionsArea').style.display = 'block';
+        }
+
         function openIphonePage() {
             document.getElementById('platformsArea').style.display = 'none';
             document.getElementById('iphonePage').style.display = 'block';
         }
 
-        function openAndroidPage() {
-            document.getElementById('platformsArea').style.display = 'none';
-            document.getElementById('androidPage').style.display = 'block';
+        function openAndroidGlPage() {
+            document.getElementById('androidVersionsArea').style.display = 'none';
+            document.getElementById('androidGlPage').style.display = 'block';
+        }
+
+        function openAndroidKrPage() {
+            document.getElementById('androidVersionsArea').style.display = 'none';
+            document.getElementById('androidKrPage').style.display = 'block';
+        }
+
+        function openAndroidTwPage() {
+            document.getElementById('androidVersionsArea').style.display = 'none';
+            document.getElementById('androidTwPage').style.display = 'block';
+        }
+
+        function openAndroidVngPage() {
+            document.getElementById('androidVersionsArea').style.display = 'none';
+            document.getElementById('androidVngPage').style.display = 'block';
         }
 
         function goBackPlatforms() {
             document.getElementById('iphonePage').style.display = 'none';
-            document.getElementById('androidPage').style.display = 'none';
+            document.getElementById('androidVersionsArea').style.display = 'none';
             document.getElementById('platformsArea').style.display = 'block';
+        }
+
+        function goBackAndroidVersions() {
+            document.getElementById('androidGlPage').style.display = 'none';
+            document.getElementById('androidKrPage').style.display = 'none';
+            document.getElementById('androidTwPage').style.display = 'none';
+            document.getElementById('androidVngPage').style.display = 'none';
+            document.getElementById('androidVersionsArea').style.display = 'block';
         }
 
         function goBackMain() {
